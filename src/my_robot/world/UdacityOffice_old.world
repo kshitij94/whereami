@@ -1077,10 +1077,10 @@
       </model>
 
       <model name='ball'>
-        <pose>2.0 1.01961 0.1 0 -0 0</pose>
+        <pose>-0.502314 1.01961 0.1 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose>2.0 1.01961 0.1 0 -0 0</pose>
+          <pose>-0.502314 1.01961 0.1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>

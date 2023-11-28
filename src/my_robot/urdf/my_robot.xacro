@@ -99,7 +99,6 @@
 
 
   <link name='right_wheel'>
-  <!-- left wheel -->
       <pose>1 1 1 0 0 0</pose>
       <inertial>
       	<mass value="5.0"/>
@@ -139,7 +138,7 @@
 
   <joint name="right_wheel_hinge" type="continuous">
     <origin xyz="0 -0.15 0" rpy="0 0 0" />
-    <axis xyz="0 -1 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0"/>
     <parent link="chassis"/>
