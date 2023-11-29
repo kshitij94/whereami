@@ -30,14 +30,21 @@ void process_image_callback(const sensor_msgs::Image img)
     // Then, identify if this pixel falls in the left, mid, or right side of the image
     // Depending on the white ball position, call the drive_bot function and pass velocities to it
     // Request a stop when there's no white ball seen by the camera
-    ROS_INFO_STREAM("img.height");
-    ROS_INFO_STREAM(img.height);
-    ROS_INFO_STREAM("img.width");
-    ROS_INFO_STREAM(img.width);
-    for (int row = 0; row < img.height; row++) {
-        for (int col = 0; col < img.width; col++) {
-            int index = row * col; 
+    ROS_INFO_STREAM("img.step");
+    ROS_INFO_STREAM(img.step);
 
+
+      for (int i = 0;i < img.height * img.step; i++) {
+        if (img.data[i] == 255) {
+            white_pixel_col = i;
+            break;
+        }
+    }
+
+    /*
+    for (int row = 0; row < img.height; row++) {
+        for (int col = 0; col < img.step; col++) {
+            int index = row * col; 
             if (img.data[index] == 255) {
                 white_pixel_col = col;
                 break;
@@ -45,10 +52,15 @@ void process_image_callback(const sensor_msgs::Image img)
         }
     }
 
+*/
+    ROS_INFO_STREAM("white_pixel_col");
+    ROS_INFO_STREAM(white_pixel_col);
+
+    white_pixel_col = white_pixel_col %2400;
     if (white_pixel_col == -1) {
         ROS_INFO_STREAM("Ball not found. Stopping Bot.");        
         drive_robot(0.0, 0.0);
-    } else if ((white_pixel_col/img.width) < 0.33){
+    } else if (((float)white_pixel_col/2400) < 0.33){
         // turn left at 45 degree.
         ROS_INFO_STREAM("Ball found. Rotating left at 45 degree.");        
         drive_robot(0.0, 0.2);
@@ -57,16 +69,23 @@ void process_image_callback(const sensor_msgs::Image img)
         ros::Duration(1).sleep();
         ROS_INFO_STREAM("Ball found. Moving forward now.");        
         
-        drive_robot(1.0, 0.0);
-    } else if ((white_pixel_col/img.width) < 0.66) {
-        drive_robot(1.0,0.0);
+        drive_robot(0.2, 0.0);
+    } else if (((float)white_pixel_col/2400) < 0.66) {
+        ROS_INFO_STREAM("Ball found. Moving forward.");        
+
+        drive_robot(0.2,0.0);
     } else {
+        ROS_INFO_STREAM("Ball found. Rotating right at 45 degree.");        
+
         // turn right at 45 degree.
         drive_robot(0.0, -0.2);
+        ROS_INFO_STREAM("Ball found. Rotating right at 45 degree complete.");        
+
         ros::Duration(1).sleep();
-        drive_robot(1.0, 0.0);
+        ROS_INFO_STREAM("Ball found. Moving forward now.");        
+        
+        drive_robot(0.2, 0.0);
     }
-    ros::Duration(10).sleep();
 }
 
 
