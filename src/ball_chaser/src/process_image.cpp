@@ -86,6 +86,7 @@ void process_image_callback(const sensor_msgs::Image img)
         
         drive_robot(0.2, 0.0);
     }
+    ros::Duration(1).sleep();
 }
 
 
