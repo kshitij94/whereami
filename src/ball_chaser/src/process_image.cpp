@@ -51,28 +51,19 @@ void process_image_callback(const sensor_msgs::Image img)
     } else if (((float)white_pixel_col/2400) < 0.33){
         // turn left at 45 degree.
         ROS_INFO_STREAM("Ball found. Rotating left at 45 degree.");        
-        drive_robot(0.0, -0.2);
+        drive_robot(0.05, -1.0);
         ROS_INFO_STREAM("Ball found. Rotating left at 45 degree complete.");        
-        
-        ros::Duration(1).sleep();
-        ROS_INFO_STREAM("Ball found. Moving forward now.");        
-        
-        drive_robot(0.15, 0.0);
-    } else if (((float)white_pixel_col/2400) < 0.66) {
+    }
+     else if (((float)white_pixel_col/2400) < 0.66) {
         ROS_INFO_STREAM("Ball found. Moving forward.");        
 
-        drive_robot(0.15,0.0);
+        drive_robot(1.0,0.0);
     } else {
         ROS_INFO_STREAM("Ball found. Rotating right at 45 degree.");        
 
         // turn right at 45 degree.
-        drive_robot(0.0, 0.2);
+        drive_robot(0.05, 1.0);
         ROS_INFO_STREAM("Ball found. Rotating right at 45 degree complete.");        
-
-        ros::Duration(1).sleep();
-        ROS_INFO_STREAM("Ball found. Moving forward now.");        
-        
-        drive_robot(0.15, 0.0);
     }
 }
 
