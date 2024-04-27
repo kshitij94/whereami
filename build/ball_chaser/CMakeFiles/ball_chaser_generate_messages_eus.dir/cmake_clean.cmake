@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/share/roseus/ros/ball_chaser/manifest.l"
-  "/home/robot/catkin_ws/devel/share/roseus/ros/ball_chaser/srv/DriveToTarget.l"
+  "/home/robot/whereami/devel/share/roseus/ros/ball_chaser/manifest.l"
+  "/home/robot/whereami/devel/share/roseus/ros/ball_chaser/srv/DriveToTarget.l"
   "CMakeFiles/ball_chaser_generate_messages_eus"
 )
 

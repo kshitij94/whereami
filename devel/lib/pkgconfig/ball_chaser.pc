@@ -1,8 +1,8 @@
-prefix=/home/robot/catkin_ws/devel
+prefix=/home/robot/whereami/devel
 
 Name: ball_chaser
 Description: Description of ball_chaser
 Version: 0.0.0
-Cflags: -I/home/robot/catkin_ws/devel/include
+Cflags: -I/home/robot/whereami/devel/include
 Libs: -L${prefix}/lib 
 Requires: 

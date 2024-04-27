@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/include/ball_chaser/DriveToTarget.h"
+  "/home/robot/whereami/devel/include/ball_chaser/DriveToTarget.h"
   "CMakeFiles/ball_chaser_generate_messages_cpp"
 )
 

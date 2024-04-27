@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/lib/ball_chaser/drive_bot"
-  "/home/robot/catkin_ws/devel/lib/ball_chaser/drive_bot.pdb"
+  "/home/robot/whereami/devel/lib/ball_chaser/drive_bot"
+  "/home/robot/whereami/devel/lib/ball_chaser/drive_bot.pdb"
   "CMakeFiles/drive_bot.dir/src/drive_bot.cpp.o"
 )
 

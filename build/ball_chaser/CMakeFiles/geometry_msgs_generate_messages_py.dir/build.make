@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robot/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/robot/whereami/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robot/catkin_ws/build
+CMAKE_BINARY_DIR = /home/robot/whereami/build
 
 # Utility rule file for geometry_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/build: geometry_ms
 .PHONY : ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 
 ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	cd /home/robot/catkin_ws/build/ball_chaser && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/robot/whereami/build/ball_chaser && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend:
-	cd /home/robot/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/catkin_ws/src /home/robot/catkin_ws/src/ball_chaser /home/robot/catkin_ws/build /home/robot/catkin_ws/build/ball_chaser /home/robot/catkin_ws/build/ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robot/whereami/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robot/whereami/src /home/robot/whereami/src/ball_chaser /home/robot/whereami/build /home/robot/whereami/build/ball_chaser /home/robot/whereami/build/ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ball_chaser/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
 

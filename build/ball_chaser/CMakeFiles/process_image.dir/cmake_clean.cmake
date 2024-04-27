@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/lib/ball_chaser/process_image"
-  "/home/robot/catkin_ws/devel/lib/ball_chaser/process_image.pdb"
+  "/home/robot/whereami/devel/lib/ball_chaser/process_image"
+  "/home/robot/whereami/devel/lib/ball_chaser/process_image.pdb"
   "CMakeFiles/process_image.dir/src/process_image.cpp.o"
 )
 

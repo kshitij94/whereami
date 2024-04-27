@@ -1,4 +1,4 @@
-prefix=/home/robot/catkin_ws/install
+prefix=/home/robot/whereami/install
 
 Name: my_robot
 Description: Description of my_robot

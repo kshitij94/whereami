@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robot/catkin_ws/devel/lib/python3/dist-packages/ball_chaser/srv/_DriveToTarget.py"
-  "/home/robot/catkin_ws/devel/lib/python3/dist-packages/ball_chaser/srv/__init__.py"
+  "/home/robot/whereami/devel/lib/python3/dist-packages/ball_chaser/srv/_DriveToTarget.py"
+  "/home/robot/whereami/devel/lib/python3/dist-packages/ball_chaser/srv/__init__.py"
   "CMakeFiles/ball_chaser_generate_messages_py"
 )
 
